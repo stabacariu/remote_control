@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project(remote_control)
+find_package(OpenCV REQUIRED)
+add_executable(remote_control ../src/main.cpp ../src/PCA9685.cpp)
+target_link_libraries(remote_control ${OpenCV_LIBS})
